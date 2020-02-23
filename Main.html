@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <title>
+Supreme
+</title>
+<link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet">
+<link rel="stylesheet"href="main.css"" type="text/css">
+<meta name="viewport"content="width= device-width,initial-scale=1">
+      <script type="text/javascript" src="date_time.js"></script>
+    </head>
+<style>
+
+html,		body {
+					font-family: 'Special Elite', cursive;
+							max-width:1000px;
+							max-height: auto;
+					background-image:url(https://wallpaperaccess.com/download/ink-explosion-1583341) , url(https://upload.wikimedia.org/wikipedia/commons/2/28/Supreme_Logo.svg);
+					background-blend-mode: luminosity;
+					background-size: auto;
+					background-position: center;
+					background-repeat:repeat no-repeat;
+					margin: 0;
+					font-size: 1em;
+					font-weight: 300;
+					
+							}
+							header {
+											
+											position: fixed;
+											
+											}
+													#date_time{
+																	display: inline-block;
+													color: white;
+													text-align: center;
+													align-content: center;
+													padding-top: 5em;
+													padding-left: 20%;
+													
+													
+													}
+													
+							.text-block {
+											line-height:4em;
+											text-align: justify;
+											justify-content: start;
+											padding-left: 45%;
+											}
+				
+.text-block li{
+				color: white;
+				decoration: none;
+				list-style: none;
+				
+				}
+				.text-block a{
+								color: white;
+								text-decoration: none;
+								}
+								.text-block a:hover {
+												color: red;
+												}
+												
+	
+</style>
+
+    
+            <span id="date_time"></span>
+            <script type="text/javascript">window.onload = date_time('date_time');</script>
+
+
+
+<header>
+<div data-role = "page">
+
+<a href="time.html"></a>
+</header>
+
+<body>
+
+  <ul class="text-block">
+<li><a href="about.html">about</a></li>
+<li><a href="supreme.html">shop</a></li>
+<li><a href="stores.html">stores</a></li>
+
+
+
+  
+
+
+<script>
+
+function date_time(id)
+{
+        date = new Date;
+        year = date.getFullYear();
+        month = date.getMonth();
+        months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'Jully', 'August', 'September', 'October', 'November', 'December');
+        d = date.getDate();
+        day = date.getDay();
+        days = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
+        h = date.getHours();
+        if(h<10)
+        {
+                h = "0"+h;
+        }
+        m = date.getMinutes();
+        if(m<10)
+        {
+                m = "0"+m;
+        }
+        s = date.getSeconds();
+        if(s<10)
+        {
+                s = "0"+s;
+        }
+        result = ''+days[day]+' '+months[month]+' '+d+' '+year+' '+h+':'+m+':'+s;
+        document.getElementById(id).innerHTML = result;
+        setTimeout('date_time("'+id+'");','1000');
+        return true;
+}
+
+</script>
+
+</body>
+</div>
+</html>
